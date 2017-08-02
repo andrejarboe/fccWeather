@@ -5,7 +5,7 @@ $(document).ready(function(){
     $.getJSON("http://ip-api.com/json/", function(location) {
         let city = location.city;
 
-        $('.location').text(city);
+        $('.location').html(city);
     });
 
 
