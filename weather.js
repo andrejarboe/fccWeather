@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Display City Name
-    $.getJSON("https://ip-api.com/json/", function(location) {
+    $.getJSON("https://crossorigin.me/https://ip-api.com/json/", function(location) {
         let city = location.city;
 
         $('.location').html(city);
