@@ -1,11 +1,13 @@
 /* Global */
 body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open-sans', sans-serif;
-  color: #fff;
-  background-color: #8BD1FF;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open-sans', sans-serif;
+    color: #fff;
+    background-color: #8BD1FF;
+    display: flex;
+    flex-direction: column;
 }
 
 .container{
@@ -55,6 +57,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: auto;
+    margin: 50px 0px;
 }
 
 #weather .row > div{
@@ -86,4 +89,29 @@ img{
     text-transform: capitalize;
 }
 
+/* Footer */
+.footer{
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #589EF4;
+}
 
+.footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer a:hover{
+    color: #256BC1;
+}
+
+/* Media Queries */
+
+/* iphone 5/small screen */
+@media only screen and (max-width: 320px) {
+    #date{
+        font-size: 20px;
+    }
+}
