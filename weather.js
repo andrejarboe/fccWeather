@@ -46,6 +46,7 @@ $(document).ready(function() {
                 let city = weather.name;
                 let icon = weather.weather[0].icon;
                 let summary = weather.weather[0].description;
+                let main = weather.weather[0].main;
 
                 // console.log('Unit is - ' +unit);
                 // console.log('icon = ' +icon);
@@ -54,11 +55,42 @@ $(document).ready(function() {
                 $('.city').html(city);
                 
                 // Display weather icon to dom 
-                $('.weather-icon').html('<img class="icon" src='+icon+' alt=""/>');
+                // $('.weather-icon').html('<img class="icon" src='+icon+' alt=""/>');
+                main = main.toLowerCase();
+                switch(main){
+                        case 'drizzle':
+                            $('.weather-icon').html('<i class="wi wi-sprinkle"></i>')
+                            break;
+                        case 'clouds':
+                            $('.weather-icon').html('<i class="wi wi-cloudy"></i>')                            
+                            break;
+                        case 'rain':
+                            $('.weather-icon').html('<i class="wi wi-showers"></i>')                            
+                            break;
+                        case 'snow':
+                            $('.weather-icon').html('<i class="wi wi-snow"></i>')
+                            break;
+                        case 'clear':
+                            $('.weather-icon').html('<i class="wi wi-day-sunny"></i>')  
+                            break;
+                        case 'thunderstom':
+                            $('.weather-icon').html('<i class="wi wi-thunderstorm"></i>') 
+                            break;                             
+                        case 'mist':
+                            $('.weather-icon').html('<i class="wi wi-fog"></i>')
+                            break;
+                        default:
+                            $('.weather-icon').html('<img class="icon" src='+icon+' alt=""/>');
+            
+                }
+
+                console.log(main);
 
                 // Display decsription to DOM
                 $('.summary').text(summary);
-                console.log(summary);
+                console.log('description: ' +summary);
+                console.log('main: ' +main);
+                
 
                 // Diplay temp to dom in corrent unit
                 temp = temp * (9/5) + 32;
