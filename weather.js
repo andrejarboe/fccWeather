@@ -33,11 +33,12 @@ $(document).ready(function() {
             lat = position.coords.latitude;
             lon = position.coords.longitude;
 
-            console.log('Your lat is: ' +lat);
-            console.log('Your lon is: ' +lon);
+            // console.log('Your lat is: ' +lat);
+            // console.log('Your lon is: ' +lon);
 
             // Make fcc api url
             let url = 'https://fcc-weather-api.glitch.me/api/current?lat='+lat+'&lon='+lon;
+            
             // Use fcc api
             $.getJSON(url, function(weather) {
             // Get weather
@@ -46,8 +47,9 @@ $(document).ready(function() {
             let icon = weather.weather[0].icon;
             let summary = weather.weather[0].description;
 
-            console.log('Unit is - ' +unit);
-            console.log('icon = ' +icon);
+            // console.log('Unit is - ' +unit);
+            // console.log('icon = ' +icon);
+
             // Display location on dom
             $('.city').html(city);
             
@@ -78,11 +80,11 @@ $(document).ready(function() {
                     $('.temp').html(Math.round(temp)+  ' &#8457;');
                 }
 
-                console.log('click');
-                console.log('Unit is - ' +unit);
+                // console.log('click');
+                // console.log('Unit is - ' +unit);
             });
 
-            
+            console.log(weather.weather[0][]);
             
             });
             
