@@ -83,6 +83,7 @@ img{
 
 .summary{
     font-size: 40px;
+    text-transform: capitalize;
 }
 
 
