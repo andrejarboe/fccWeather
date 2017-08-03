@@ -67,6 +67,11 @@ body{
     margin-top: 40px;
 }
 
+img{
+    width: 250px;
+    height: 250px;
+}
+
 .city{
     margin-top: 10px;
     font-size: 55px;
