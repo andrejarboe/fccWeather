@@ -9,8 +9,7 @@ body{
 }
 
 .container{
-    margin: auto;
-    border: 1px solid green;
+    margin: auto 2%;
 }
 
 
@@ -25,7 +24,6 @@ body{
     display: flex; 
     flex-direction: row;
     align-items: center;
-    margin: auto;
 }
 
 #date{
@@ -69,7 +67,7 @@ body{
     margin-top: 40px;
 }
 
-.location{
+.city{
     margin-top: 10px;
     font-size: 55px;
 }
