@@ -9,7 +9,7 @@ body{
 }
 
 .container{
-    margin: 0px 10%;
+    margin: auto;
     border: 1px solid green;
 }
 
@@ -21,29 +21,33 @@ body{
     padding: 10px 0px;
 }
 
-.title{
+.navbar{
     display: flex; 
-    justify-content: space-around;
     align-items: center;
+    margin: auto 2%;
+}
 
-
+#date{
+    font-size: 25px;
+    margin-right: auto;
 }
 
 .on{
     background-color: #fff;
     color: #256BC1;
-    padding: 0px 25px;
+    padding: 0px 12px;
 }
 
 .off{
     color: #256BC1;
-    margin: 0px 25px;
+    margin: 0px 12px;
 }
 
 .switch{
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-left: auto;
 }
 
 /* weather */
@@ -70,7 +74,7 @@ body{
 }
 
 .temp{
-    font-size: 40px;
+    font-size: 50px;
 }
 
 
