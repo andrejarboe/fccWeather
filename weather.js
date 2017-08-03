@@ -41,50 +41,48 @@ $(document).ready(function() {
             
             // Use fcc api
             $.getJSON(url, function(weather) {
-            // Get weather
-            let temp = weather.main.temp;
-            let city = weather.name;
-            let icon = weather.weather[0].icon;
-            let summary = weather.weather[0].description;
+                // Get weather
+                let temp = weather.main.temp;
+                let city = weather.name;
+                let icon = weather.weather[0].icon;
+                let summary = weather.weather[0].description;
 
-            // console.log('Unit is - ' +unit);
-            // console.log('icon = ' +icon);
-
-            // Display location on dom
-            $('.city').html(city);
-            
-            // Display weather icon to dom 
-            $('.weather-icon').html('<img class="icon" src='+icon+' alt=""/>');
-
-            // Display decsription to DOM
-            $('.summary').text(summary);
-            console.log(summary);
-
-            // Diplay temp to dom in corrent unit
-            temp = temp * (9/5) + 32;
-            $('.temp').html(Math.round(temp)+  ' &#8457;');
-
-            $('.switch').click(function(event) {
-                $('.unitf').toggleClass('off on');
-                $('.unitc').toggleClass('off on');
-
-                // reset temp so can be used again 
-                temp = weather.main.temp;
-
-                if(unit === 'F'){
-                    unit = 'C';
-                    $('.temp').html(Math.round(temp)+ ' &#8451;');
-                }else {
-                    unit = 'F';
-                    temp = temp * (9/5) + 32;
-                    $('.temp').html(Math.round(temp)+  ' &#8457;');
-                }
-
-                // console.log('click');
                 // console.log('Unit is - ' +unit);
-            });
+                // console.log('icon = ' +icon);
 
-            console.log(weather.weather[0][]);
+                // Display location on dom
+                $('.city').html(city);
+                
+                // Display weather icon to dom 
+                $('.weather-icon').html('<img class="icon" src='+icon+' alt=""/>');
+
+                // Display decsription to DOM
+                $('.summary').text(summary);
+                console.log(summary);
+
+                // Diplay temp to dom in corrent unit
+                temp = temp * (9/5) + 32;
+                $('.temp').html(Math.round(temp)+  ' &#8457;');
+
+                $('.switch').click(function(event) {
+                    $('.unitf').toggleClass('off on');
+                    $('.unitc').toggleClass('off on');
+
+                    // reset temp so can be used again 
+                    temp = weather.main.temp;
+
+                    if(unit === 'F'){
+                        unit = 'C';
+                        $('.temp').html(Math.round(temp)+ ' &#8451;');
+                    }else {
+                        unit = 'F';
+                        temp = temp * (9/5) + 32;
+                        $('.temp').html(Math.round(temp)+  ' &#8457;');
+                    }
+
+                    // console.log('click');
+                    // console.log('Unit is - ' +unit);
+                });
             
             });
             
